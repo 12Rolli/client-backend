@@ -1,0 +1,76 @@
+@use "../util" as *;
+
+.forms {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  justify-content: center;
+  //   .close {
+  //     position: absolute;
+  //     padding-top: rem(18);
+  //     right: 14%;
+  //     cursor: pointer;
+  //   }
+  .form {
+    padding: rem(60) rem(50);
+    border-bottom: 1px solid #333;
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    h2 {
+      text-align: center;
+      padding-bottom: rem(39);
+    }
+    &__input {
+      padding: 1rem 1.2rem;
+      margin-bottom: rem(16);
+      border-radius: rem(10);
+      background-color: var(--white, 0.5);
+      border: 1px solid var(--gray);
+      width: 100%;
+      display: block;
+      &--message {
+        padding: 4rem;
+      }
+      &:focus {
+        outline: none;
+        box-shadow: 0 1rem 2rem rgba(var(--black), 0.1);
+        border-bottom: 3px solid var(--brown-dark);
+      }
+      &:focus:invalid {
+        border-bottom: 3px solid var(--black);
+      }
+    }
+    &__label {
+      color: var(--brown-dark);
+      text-align: left;
+      margin-bottom: 1rem;
+      font-weight: 700;
+      display: block;
+      transition: all 0.3s;
+    }
+    &__input:placeholder-shown + &__label {
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-4rem);
+    }
+    .btnbg {
+      font-weight: 700;
+      font-size: rem(13);
+      color: var(--white);
+      padding: rem(11.2) rem(25) rem(11.2) rem(25);
+      border-radius: rem(9);
+      background-color: hsla(7, 82%, 67%, 1);
+      margin-bottom: rem(16);
+      cursor: pointer;
+      align-self: start;
+    }
+    .btnLink {
+      font-weight: 700;
+      font-size: rem(13);
+      padding-bottom: rem(11.2);
+      cursor: pointer;
+    }
+  }
+}
