@@ -11,6 +11,16 @@
     color: var(--white);
     transition: all 0.5s ease;
 
+    @include breakpoint-down(small) {
+        width: 0;
+
+        .sidebar__name,
+        .sidebar__image,
+        .sidebar__notification,.sidebar__navigation {
+            display: none;
+        }
+    }
+
     &.active {
         width: 3rem;
         overflow: hidden;
@@ -24,6 +34,10 @@
             // position: absolute;
             // top: 0.1rem;
             // left: 13%;
+        }
+        .sidebar__image,
+        .sidebar__notification,.sidebar__navigation {
+            display: block;
         }
     }
 
@@ -102,6 +116,7 @@
 }
 .body {
     background-color: var(--white);
+    position: relative;
 }
 .home {
     &.active {
@@ -121,6 +136,11 @@
         left: 16rem;
         position: relative;
         transition: all 0.5s ease;
+
+        @include breakpoint-down(small) {
+            width: 100%;
+            left: 0;
+        }
     }
     &__top {
         height: 3rem;
@@ -221,7 +241,8 @@
             color: var(--white);
 
             &:hover {
-                background-color: var(--secondarycolor);
+                background-color: var(--tertiarycolor);
+                border: 1px solid var(--tertiarycolor);
             }
             span {
                 font-weight: 700;
@@ -232,7 +253,7 @@
 
     &__table {
         padding: 1.5rem 2rem 0 2rem;
-       
+        margin-bottom: 2rem;
 
         &__title {
             font-weight: 800;
@@ -242,21 +263,20 @@
             color: var(--pink);
             border-top-left-radius: rem(10);
             border-top-right-radius: rem(10);
-            
+            box-shadow: 0 0 9px rgba(0, 0, 0, 0.25);
         }
 
         &__container {
             display: flex;
             flex-wrap: wrap;
-            padding: 1rem ;
-           
+            padding: 1rem;
+            box-shadow: 0 1px 9px rgba(0, 0, 0, 0.25);
         }
 
         &__item {
             &__header {
                 position: relative;
                 img {
-                  
                 }
             }
             &__overlay {
@@ -276,8 +296,9 @@
                     display: flex;
                     align-items: center;
                     gap: 0.2rem;
+                    cursor: pointer;
 
-                    i{
+                    i {
                         font-size: 0.5rem;
                     }
                 }
@@ -292,5 +313,17 @@
                 background-color: #c95b5b;
             }
         }
+
+        &__footer {
+            border-top: 1px solid #a8a8a8;
+            display: flex;
+            align-items: center;
+            padding: 1rem 0.5rem;
+            box-shadow: 0 3px 9px rgba(0, 0, 0, 0.25);
+        }
     }
+}
+
+.hidden{
+    display: none;
 }

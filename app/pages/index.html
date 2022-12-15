@@ -1281,6 +1281,7 @@
                       <a class="elts-desc" onclick="imagePop(id)" id="img-1"
                         ><em>Commandez</em></a
                       >
+                      <!-- <div class="elts-buy">Acheter</div> -->
                     </div>
                     <div class="elts-img">
                       <img
@@ -1544,7 +1545,8 @@
                     </div>
                     <div class="elts-img">
                       <img
-                        src="https://res.cloudinary.com/digital-x-sarl/image/upload/v1671104205/mariage%20client%201/cadeau/bloc1/Rectangle_157.png"/>
+                        src="https://res.cloudinary.com/digital-x-sarl/image/upload/v1671104205/mariage%20client%201/cadeau/bloc1/Rectangle_157.png"
+                      />
                       <!-- href="https://amzn.eu/d/gs6dM9Q" -->
                       <a class="elts-desc" onclick="imagePop(id)" id="img-30"
                         ><em>Commandez</em></a
@@ -1595,10 +1597,13 @@
                     </div>
                     <div class="block_1__desc">
                       <h3>Note from the couple</h3>
-                      <span
-                        >Veuillez noter que les prix peuvent baisser ou
-                        augmenter</span
-                      >
+                      <div class="flex">
+                        <img src="https://res.cloudinary.com/digital-x-sarl/image/upload/v1669720671/mariage%20client%201/logo/LOGO.png">
+                        <span
+                          >Veuillez noter que les prix peuvent baisser ou
+                          augmenter</span
+                        >
+                      </div>
                     </div>
                   </div>
                   <div class="block_2 form">
@@ -1610,7 +1615,7 @@
                       required
                       class="form__input"
                     />
-                    <label for="name" class="form__label">Email</label>
+                    <label for="email" class="form__label">Email</label>
                     <input
                       type="email"
                       name="email"
@@ -1618,7 +1623,9 @@
                       required
                       class="form__input"
                     />
-                    <label for="name" class="form__label">Mot de Cadeau</label>
+                    <label for="message" class="form__label"
+                      >Mot de Cadeau</label
+                    >
                     <textarea
                       name="message"
                       cols="30"
@@ -1626,8 +1633,9 @@
                       placeholder="Laissez une note aux mariés (optional)"
                       class="form__input"
                     ></textarea>
-                    <div class="btnbg">Achetez Le Produit</div>
-                    <div class="btnLink">Marquez comme acheter</div>
+                    <div class="btnbg"onclick="alert('Produit acheter')">Achetez Le Produit</div>
+                    <!-- <div class="btnLink" onclick="alert('Produit acheter')"><input type="button"> Marquez comme acheter</div> -->
+                    <div class="btnLink" onclick="Produit()"><input type="button"> Marquez comme acheter</div>
                   </div>
                 </div>
               </div>

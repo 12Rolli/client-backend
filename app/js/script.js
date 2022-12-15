@@ -1,36 +1,25 @@
-var imageUrls = [
-  'url("https://res.cloudinary.com/digital-x-sarl/image/upload/v1669907134/mariage%20client%201/cadeau/bloc1/img-1.png")',
-  'url("https://res.cloudinary.com/digital-x-sarl/image/upload/v1669907134/mariage%20client%201/cadeau/bloc1/img-2.png")',
-  'url("https://res.cloudinary.com/digital-x-sarl/image/upload/v1669907134/mariage%20client%201/cadeau/bloc1/img-3.png")',
-  'url("https://res.cloudinary.com/digital-x-sarl/image/upload/v1669907134/mariage%20client%201/cadeau/bloc1/img-4.png")',
-  'url("https://res.cloudinary.com/digital-x-sarl/image/upload/v1669907134/mariage%20client%201/cadeau/bloc1/img-5.png")',
-  'url("https://res.cloudinary.com/digital-x-sarl/image/upload/v1669907134/mariage%20client%201/cadeau/bloc1/img-6.png")',
-  'url("https://res.cloudinary.com/digital-x-sarl/image/upload/v1669907134/mariage%20client%201/cadeau/bloc1/img-7.png")',
-  'url("https://res.cloudinary.com/digital-x-sarl/image/upload/v1669907134/mariage%20client%201/cadeau/bloc1/img-8.png")',
-  'url("https://res.cloudinary.com/digital-x-sarl/image/upload/v1669907134/mariage%20client%201/cadeau/bloc1/img-9.png")',
-];
-var windowsWs = window.innerWidth;
-// if (windowsWs >= 810) {
-  function imagePop(id) {
-    document.getElementById("registre__popupId").style.display = "block";
-    document.getElementById("registre_blocs__lists").style.display = "block";
-    // document.getElementsByTagName("body")[0].style.overflowY = "hidden";
+// Popup inscription visiteur
 
-    var imageName = document.getElementById(id + "-image").style
-      .backgroundImage;
-    var imageIndex = 0;
-    imageIndex = imageUrls.indexOf(imageName);
-    document.getElementsByClassName("imageContain")[0].style.backgroundImage =
-      imageUrls[imageIndex];
-  }
-  function imagePopNone() {
-    document.getElementsByClassName("registre__popup")[0].style.display =
-      "none";
-    document.getElementsByTagName("body")[0].style.overflowY = "scroll";
-    document.getElementsByClassName("registre_blocs__lists")[0].style.display =
-      "block";
-  }
-// } 
+function aficher() {
+  alert("ce produit est deja acheter");
+}
+function imagePop(id) {
+  document.getElementById("registre__popupId").style.display = "block";
+  document.getElementById("registre_blocs__lists").style.display = "block";
+  // document.getElementsByTagName("body")[0].style.overflowY = "hidden";
+
+  var imageName = document.getElementById(id + "-image").style.backgroundImage;
+  var imageIndex = 0;
+  imageIndex = imageUrls.indexOf(imageName);
+  document.getElementsByClassName("imageContain")[0].style.backgroundImage =
+    imageUrls[imageIndex];
+}
+function imagePopNone() {
+  document.getElementsByClassName("registre__popup")[0].style.display = "none";
+  document.getElementsByTagName("body")[0].style.overflowY = "scroll";
+  document.getElementsByClassName("registre_blocs__lists")[0].style.display =
+    "block";
+}
 
 // References to DOM Elements
 const prevBtn = document.querySelector("#story__prev-btn");

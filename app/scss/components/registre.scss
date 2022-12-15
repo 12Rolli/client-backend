@@ -93,6 +93,22 @@
           opacity: 0;
           transition: all 0.7s ease-in-out;
         }
+        &-buy{
+          cursor: no-drop;
+          position: absolute;
+          top: 50%;
+          left: 0%;
+          transform: translate(50%, 50%);
+          color: var(--brown);
+          background-color: var(--white);
+          border-radius: rem(4);
+          transition: all 0.7s ease-in-out;
+        }
+        .activ {
+          position: absolute;
+          top: O;
+          right: 0;
+        }
       }
       .money,
       .paypal {
@@ -184,6 +200,17 @@
         gap: rem(32);
         padding-top: rem(16);
       }
+      &__desc {
+        .flex {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: rem(13);
+          img {
+            width: 15%;
+          }
+        }
+      }
     }
     .form {
       padding-top: rem(60);
@@ -209,7 +236,7 @@
         &:focus {
           outline: none;
           box-shadow: 0 1rem 2rem rgba(var(--black), 0.1);
-          border-bottom: rem(3) solid var(--brown-dark);
+          border-bottom: 0.125rem solid var(--black);
           &:invalid {
             border-bottom: rem(2) solid var(--black);
           }
@@ -228,11 +255,15 @@
         font-weight: 700;
         font-size: rem(13);
         color: var(--white);
+        border: 1px solid var(--pink);
         padding: rem(11.2) rem(25) rem(11.2) rem(25);
         margin-bottom: rem(11);
         border-radius: rem(9);
         background-color: var(--brown);
         cursor: pointer;
+        &:hover {
+          background-color: var(--secondarycolor);
+        }
       }
       .btnLink {
         text-align: center;
